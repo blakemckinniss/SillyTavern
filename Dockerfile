@@ -32,11 +32,7 @@ RUN \
   dos2unix "./docker-entrypoint.sh"
   
 RUN \
-  rm -rf "public" && \
-  ln -s "public" "/blake/public" && \
-  mkdir "config" && \
-  IFS="," RESOURCES="characters,chats,groups,group chats,User Avatars,worlds,settings.json" && \
-  for R in $RESOURCES; do ln -s "../config/$R" "public/$R"; done && \
+  rm -rf "public"
 
 EXPOSE 8000
 
