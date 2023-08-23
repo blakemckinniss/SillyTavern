@@ -21,11 +21,6 @@ RUN \
 # Bundle app source
 COPY . ./
 
-RUN \
-  rm -rf "public" && \
-  ln -s "/blake/public" "public" && \
-  mkdir "config"
-
 # Cleanup unnecessary files
 RUN \
   echo "*** Cleanup ***" && \
@@ -35,6 +30,11 @@ RUN \
   chmod +x "./docker-entrypoint.sh" && \
   echo "*** Convert line endings to Unix format ***" && \
   dos2unix "./docker-entrypoint.sh"
+
+RUN \
+  rm -rf "public" && \
+  ln -s "/blake/public" "public" && \
+  mkdir "config"
 
 EXPOSE 8000
 
