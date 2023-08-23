@@ -3,6 +3,9 @@
 # Initialize missing user files
 IFS="," RESOURCES="characters,groups,group chats,chats,User Avatars,worlds"
 
+echo "CURRENT"
+ls
+echo "PUBLIC"
 ls /public
 
 for R in $RESOURCES; do
