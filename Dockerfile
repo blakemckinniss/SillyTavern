@@ -31,7 +31,7 @@ RUN \
   done && \
   \
   rm -rf "public" && \
-  ln -s "/blake/public" "public"
+  ln -s "/blake/public" "public" && \
   mkdir "config"
 
 # Cleanup unnecessary files
