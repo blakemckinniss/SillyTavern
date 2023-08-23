@@ -1572,7 +1572,7 @@ app.post("/savesettings", jsonParser, function (request, response) {
         response.send(err);
     }
     try {
-        writeFileAtomicSync('blake/settings.json', JSON.stringify(request.body, null, 4), 'utf8');
+        writeFileAtomicSync('blake/public/settings.json', JSON.stringify(request.body, null, 4), 'utf8');
         response.send({ result: "ok" });
     } catch (err) {
         console.log(err);
