@@ -34,7 +34,9 @@ RUN \
 RUN \
   rm -rf "public" && \
   ln -s "/blake/public" "public" && \
-  mkdir "config"
+  mkdir "config" && \
+  IFS="," RESOURCES="characters,chats,groups,group chats,User Avatars,worlds,settings.json" && \
+  for R in $RESOURCES; do ln -s "../config/$R" "public/$R"; done && \
 
 EXPOSE 8000
 
