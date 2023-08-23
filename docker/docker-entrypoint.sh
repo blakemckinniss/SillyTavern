@@ -1,5 +1,9 @@
 #!/bin/sh
 
+if [ ! -e "blake/settings.json" ]; then
+    cp -r "default/settings.json" "blake/settings.json"
+fi
+
 # Initialize missing user files
 IFS="," RESOURCES="characters,groups,group chats,chats,User Avatars,worlds"
 for R in $RESOURCES; do
