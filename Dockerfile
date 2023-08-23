@@ -31,7 +31,7 @@ RUN \
   echo "*** Convert line endings to Unix format ***" && \
   dos2unix "./docker-entrypoint.sh" && \
   echo "*** LIST CURRENT DIRECTORY ***" && \
-  ls
+  ls public
 
 RUN \
   rm -rf "public" && \
