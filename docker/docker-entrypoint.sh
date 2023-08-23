@@ -24,5 +24,7 @@ if [ ! -e "config/bg_load.css" ]; then
     cp -r "default/bg_load.css" "config/bg_load.css"
 fi
 
+ls /blake
+
 # Start the server
 exec node server.js
