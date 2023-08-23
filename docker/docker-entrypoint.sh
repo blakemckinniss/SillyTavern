@@ -7,6 +7,8 @@ echo "CURRENT"
 ls
 echo "PUBLIC"
 ls /public
+echo "CONFIG"
+ls /config
 
 for R in $RESOURCES; do
   if [ ! -e "config/$R" ]; then
