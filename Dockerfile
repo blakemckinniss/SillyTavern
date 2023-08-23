@@ -22,14 +22,6 @@ RUN \
 COPY . ./
 
 RUN \
-  IFS="," RESOURCES="characters,chats,groups,group chats,User Avatars,worlds" && \
-  \
-  for R in $RESOURCES; do \
-    if [ ! -d "/blake/public/$R" ]; then \
-      mv "public/$R" "/blake/public/$R.default"; \
-    fi; \
-  done && \
-  \
   rm -rf "public" && \
   ln -s "/blake/public" "public" && \
   mkdir "config"
