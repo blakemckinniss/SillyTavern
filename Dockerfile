@@ -29,7 +29,9 @@ RUN \
   echo "*** Make docker-entrypoint.sh executable ***" && \
   chmod +x "./docker-entrypoint.sh" && \
   echo "*** Convert line endings to Unix format ***" && \
-  dos2unix "./docker-entrypoint.sh"
+  dos2unix "./docker-entrypoint.sh" && \
+  echo "*** LIST CURRENT DIRECTORY ***" && \
+  ls
 
 RUN \
   rm -rf "public" && \
