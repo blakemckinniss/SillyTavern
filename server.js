@@ -1571,13 +1571,6 @@ app.post("/savesettings", jsonParser, function (request, response) {
         console.log(err);
         response.send(err);
     }
-    try {
-        writeFileAtomicSync('blake/public/settings.json', JSON.stringify(request.body, null, 4), 'utf8');
-        response.send({ result: "ok" });
-    } catch (err) {
-        console.log(err);
-        response.send(err);
-    }
 });
 
 function getCharaCardV2(jsonObject) {
