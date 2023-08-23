@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "Start?"
 
 rm -rf "public"
 ln -s "/blake/public" "public"
