@@ -1,17 +1,7 @@
 #!/bin/bash
 
-echo "LIST BLAKE PUBLIC"
-ls /blake/public
-
-echo "LIST PUBLIC"
-ls public
-
-# Check if "public" is not a link or directory before creating a symbolic link
-if [ ! -e "public" ] && [ ! -L "public" ]; then
-    ln -s "/blake/public" "public"
-else
-    echo "public already exists. Skipping symbolic link creation."
-fi
+rm -rf "public"
+ln -s "/blake/public" "public"
 
 # Check if "config" directory exists before creating
 if [ ! -d "config" ]; then
