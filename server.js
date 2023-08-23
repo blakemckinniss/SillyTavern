@@ -52,7 +52,7 @@ const cliArguments = yargs(hideBin(process.argv))
         describe: 'Path to your private key file.'
     }).argv;
 
-// change all relative paths
+/// change all relative paths
 const path = require('path');
 const directory = process.pkg ? path.dirname(process.execPath) : __dirname;
 console.log(process.pkg ? 'Running from binary' : 'Running from source');
