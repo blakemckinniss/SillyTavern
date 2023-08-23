@@ -31,8 +31,6 @@ RUN \
   echo "*** Convert line endings to Unix format ***" && \
   dos2unix "./docker-entrypoint.sh"
   
-RUN \
-  rm -rf "public"
 
 EXPOSE 8000
 
