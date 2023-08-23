@@ -15,14 +15,10 @@ IFS=","
 RESOURCES="characters,chats,groups,group chats,User Avatars,worlds,settings.json"
 
 # Loop over resources and create symbolic links
-for R in $RESOURCES; do 
-    # Check if the link or directory doesn't already exist
-    if [ ! -e "public/$R" ] && [ ! -L "public/$R" ]; then
-        ln -s "../config/$R" "public/$R"
-    else
-        echo "public/$R already exists. Skipping symbolic link creation."
-    fi
-done
+echo "LISTING BLAKE PUBLIC -->"
+ls public
+echo "LISTING PUBLIC -->"
+ls public
 
 # Start the server
 exec node server.js
