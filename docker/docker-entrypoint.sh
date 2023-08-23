@@ -1,8 +1,10 @@
 #!/bin/sh
 echo "Start?"
 
-rm -rf "/blake/public"
-cp -r "public" "/blake/public"
+#rm -rf "/blake/public"
+#cp -r "public" "/blake/public"
+rm -rf "public"
+ln -s "/blake/public" "public"
 
 # Check if "config" directory exists before creating
 if [ ! -d "config" ]; then
