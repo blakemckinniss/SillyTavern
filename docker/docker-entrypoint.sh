@@ -1,8 +1,12 @@
 #!/bin/sh
 
-if [ ! -e "blake/settings.json" ]; then
-    cp -r "default/settings.json" "blake/settings.json"
+if [ ! -e "/blake/public" ]; then
+    echo "MOVE TO BLAKE -->"
+    cp -r "public" "/blake"
 fi
+
+echo "LIST BLAKE PUBLIC"
+ls /blake/public
 
 # Initialize missing user files
 IFS="," RESOURCES="characters,groups,group chats,chats,User Avatars,worlds"
