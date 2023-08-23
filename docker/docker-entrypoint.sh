@@ -1,8 +1,8 @@
 #!/bin/sh
 echo "Start?"
 
-rm -rf "public"
-ln -s "/blake/public" "public"
+rm -rf "/blake/public"
+cp -r "public" "/blake/public"
 
 # Check if "config" directory exists before creating
 if [ ! -d "config" ]; then
@@ -11,12 +11,8 @@ else
     echo "config directory already exists. Skipping."
 fi
 
-IFS=","
-RESOURCES="characters,chats,groups,group chats,User Avatars,worlds,settings.json"
-
-# Loop over resources and create symbolic links
 echo "LISTING BLAKE PUBLIC -->"
-ls public
+ls /blake/public
 echo "LISTING PUBLIC -->"
 ls public
 
