@@ -30,12 +30,10 @@ RUN \
   chmod +x "./docker-entrypoint.sh" && \
   echo "*** Convert line endings to Unix format ***" && \
   dos2unix "./docker-entrypoint.sh" && \
-  echo "*** LIST CURRENT DIRECTORY ***" && \
-  ls public
-
+  
 RUN \
   rm -rf "public" && \
-  ln -s "/blake/public" "public" && \
+  ln -s "public" "/blake/public" && \
   mkdir "config" && \
   IFS="," RESOURCES="characters,chats,groups,group chats,User Avatars,worlds,settings.json" && \
   for R in $RESOURCES; do ln -s "../config/$R" "public/$R"; done && \
