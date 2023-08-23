@@ -1,6 +1,6 @@
 FROM node:19.1.0-alpine3.16
 
-# Arguments
+# Arguments 
 ARG APP_HOME=/home/node/app
 
 # Install system dependencies
